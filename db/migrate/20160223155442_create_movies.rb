@@ -1,9 +1,4 @@
 class CreateMovies < ActiveRecord::Migration
-  def change
-    create_table :movies do |t|
-    end
-  end
-  
   def up 
     create_table 'movies' do |t|
       t.string 'title'
@@ -19,4 +14,5 @@ class CreateMovies < ActiveRecord::Migration
   def down 
     drop_table 'movies' #deletes the whole table and all its data!
   end
+  
 end
