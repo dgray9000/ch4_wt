@@ -9,3 +9,7 @@
   %body
     #main
       = yield
+      -if flash[:notice]
+        #notices.message= flash[:notice]
+      -elseif flash[:warning]
+        #warning.message= flash[:warning]
